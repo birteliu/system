@@ -1,0 +1,28 @@
+// 常用scss片段
+@charset "UTF-8";
+
+@mixin background-img() {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+//水平垂直置中
+@mixin ab_center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// 按鈕
+.green_btn {
+    background-color: $main-color02;
+    color: #fff;
+    &:hover {
+        background-color: darken($main-color02, 8%);
+        color: #fff;
+    }
+}

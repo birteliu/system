@@ -1,0 +1,42 @@
+button.navbar-toggler {
+    right: 15px;
+    top: 15px;
+    background-color: #fff;
+}
+.side-menu {
+    background-color: #fff;
+    padding: 0;
+    @include media-breakpoint-up(md) {
+        height: auto;
+        min-height: 100vh;
+    }
+    a.nav-link {
+        color: #000;
+        margin-right: 1rem;
+        display: block;
+        transition: .3s;
+        &:hover {
+            color: $main-color01;
+        }
+        &.active {
+            color: $main-color01;
+            border-left: 5px solid $main-color01;
+            font-weight: bold;
+        }
+    }
+    .user-info {
+        @include media-breakpoint-down(md) {
+            display: flex;
+            align-items: center;
+        }
+    }
+    .fa-user {
+        background-color: #D9D9D9;
+        color: #fff;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 20px;
+    }
+}

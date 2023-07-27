@@ -1,0 +1,24 @@
+// 引入用
+@charset "UTF-8";
+
+// 自訂文字
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Roboto&display=swap');
+
+// bootstrap 核心
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// fontawesome icon
+@import url('https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css');
+
+// 修改的變數
+@import "variables";
+@import "mixin";
+
+// 選單
+@import "nav";
+
+// 引入其他 css
+@import "bootstrap-select";
+
+// 客製化CSS
+@import "custom";

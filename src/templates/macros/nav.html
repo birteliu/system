@@ -1,0 +1,45 @@
+﻿{% macro active(activePage='home') %}
+<header class="navbar sticky-top p-0">
+	<button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+	  <span class="navbar-toggler-icon"></span>
+	</button>
+</header>
+<nav id="sidebarMenu" class="col-md-3 col-lg-auto d-md-block sidebar collapse side-menu">
+	<div class="d-flex justify-content-between flex-column h-100">
+		<div>
+			<h2 class="fw-bold text-center my-md-5"><img src="../../images/logo.svg" class="img-fluid" alt="" width="100"></h2>
+			<ul class="nav flex-column">
+			<li class="nav-item">
+				<a class="nav-link {%if activePage == 'material' %} active {% endif %}" aria-current="page" href="material-setting.html">
+				<i class="far fa-bookmark me-2"></i>原物料設定
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link {%if activePage == 'purchase' %} active {% endif %}" href="purchase.html">
+				<i class="far fa-bookmark me-2"></i>進貨管理
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link {%if activePage == 'stock' %} active {% endif %}" href="stock.html">
+				<i class="far fa-bookmark me-2"></i>存貨管理
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">
+				<i class="fas fa-cog me-2"></i>系統設定
+				</a>
+			</li>
+			</ul>
+		</div>
+		<div>
+			<hr class="mb-md-3 mb-0">  
+			<div class="p-3 user-info">
+				<i class="fas fa-user fa-2x mb-2 me-2"></i>
+				<h6 class="mb-md-1 mb-0 me-2">王曉明</h6> 
+				<div class="text-black-50 me-2">@abc123</div>
+				<button class="btn btn-secondary btn-sm mt-md-4"><i class="fas fa-sign-out-alt me-1"></i>登出</button>
+			</div>
+		</div>
+	</div>
+  </nav>
+{% endmacro %}
