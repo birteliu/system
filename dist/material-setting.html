@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>
+    原物料設定
+｜蔚旭 ERP</title>
+    <!-- 主視覺 css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body cz-shortcut-listen="true">
+
+    <!-- 主內容 -->
+    <main role="main">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- 選單 -->
+                
+
+<!-- Set navitem to active -->
+
+<header class="navbar sticky-top p-0">
+	<button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+	  <span class="navbar-toggler-icon"></span>
+	</button>
+</header>
+<nav id="sidebarMenu" class="col-md-3 col-lg-auto d-md-block sidebar collapse side-menu">
+	<div class="d-flex justify-content-between flex-column h-100">
+		<div>
+			<h2 class="fw-bold text-center my-md-5"><img src="../../images/logo.svg" class="img-fluid" alt="" width="100"></h2>
+			<ul class="nav flex-column">
+			<li class="nav-item">
+				<a class="nav-link  active " aria-current="page" href="material-setting.html">
+				<i class="far fa-bookmark me-2"></i>原物料設定
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link " href="purchase.html">
+				<i class="far fa-bookmark me-2"></i>進貨管理
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link " href="stock.html">
+				<i class="far fa-bookmark me-2"></i>存貨管理
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">
+				<i class="fas fa-cog me-2"></i>系統設定
+				</a>
+			</li>
+			</ul>
+		</div>
+		<div>
+			<hr class="mb-md-3 mb-0">  
+			<div class="p-3 user-info">
+				<i class="fas fa-user fa-2x mb-2 me-2"></i>
+				<h6 class="mb-md-1 mb-0 me-2">王曉明</h6> 
+				<div class="text-black-50 me-2">@abc123</div>
+				<button class="btn btn-secondary btn-sm mt-md-4"><i class="fas fa-sign-out-alt me-1"></i>登出</button>
+			</div>
+		</div>
+	</div>
+  </nav>
+
+
+                <div class="col-md pt-md-5 pt-3 px-3">
+                    <div class="container-fluid">
+                        <!-- 內容切換 -->
+                        
+<div class="page-title">
+    <h3>原物料設定</h3>
+    <nav aria-label="breadcrumb">
+    <ol class="breadcrumb p-0 m-0">
+      <li class="breadcrumb-item">
+        <a href="#" class=""><i class="fa fa-home me-1" aria-hidden="true"></i>首頁</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="#" class="mr-1">選單大項</a>
+      </li>
+      <li class="breadcrumb-item active" aria-current="page">當前頁面</li>
+    </ol>
+</nav>
+</div>
+<form class="search-area">
+    <div class="row g-3">
+        <div class="col-md-5">
+            <label for="">依欄位查詢</label>
+            <div class="row g-2">
+                <div class="col">
+                    <select class="form-select" aria-label="">
+                        <option selected>請選擇</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="請輸入" aria-label="">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label for="">類別</label>
+            <select class="form-select" aria-label="">
+                <option selected>請選擇</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+        <div class="col d-flex align-items-end">
+            <button class="btn btn-color02 search-btn me-2" type="submit"><i class="fas fa-search me-2"></i>查詢</button>
+            <button class="btn btn-secondary search-btn" type="submit">列出全部</button>
+        </div>
+    </div>
+</form>
+<div class="list-area p-3 mt-3 bg-white">
+    <div class="mb-2">
+        <button class="btn btn-color01 btn-sm me-1" onclick="javascript:location.href='#'"><i class="fa fa-plus-circle  me-2" aria-hidden="true"></i>新增</button>
+        <button class="btn btn-danger btn-sm me-1"><i class="far fa-trash-alt me-2" aria-hidden="true"></i>刪除</button>
+        <button class="btn btn-secondary btn-sm me-1"><i class="fa fa-download me-2" aria-hidden="true"></i>匯出</button>
+    </div>
+    <div class="table m-0">
+        <div class="row list-header">
+            <div class="cell"></div>
+            <div class="cell">項次</div>
+            <div class="cell">代碼</div>
+            <div class="cell">類別</div>
+            <div class="cell">名稱</div>
+            <div class="cell">編輯</div>
+            <div class="cell">歷程紀錄</div>
+        </div>
+        <div class="row list-body">
+            <div class="cell" data-title="選取">
+                <div class="d-inline-block p-0">
+                    <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                </div>
+            </div>
+            <div class="cell" data-title="項次">1</div>
+            <div class="cell" data-title="代碼">110</div>
+            <div class="cell" data-title="類別">耗材</div>
+            <div class="cell" data-title="名稱">XXX名稱</div>
+            <div class="cell" data-title="編輯">
+                <a href="#" class="link-color p-0" data-bs-toggle="modal" data-bs-target="#editModal"><i class="fas fa-edit fa-lg"></i></a>
+                <!-- Modal -->
+                <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="editModalLabel">原物料設定</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <form action="">
+                            <div class="mb-3">
+                                <label for="input1" class="form-label">類別</label>
+                                <select id="input" class="form-select" placeholder="請輸入">
+                                    <option selected="">請選擇</option>
+                                    <option>A</option>
+                                    <option>B</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="input1" class="form-label">代碼</label>
+                                <input type="text" class="form-control" aria-label="Zip" placeholder="請輸入">
+                            </div>
+                            <div class="mb-3">
+                                <label for="input1" class="form-label">名稱</label>
+                                <input type="text" class="form-control" aria-label="Zip" placeholder="請輸入">
+                            </div>
+                            <div class="mb-3">
+                                <label for="input1" class="form-label">備註</label>
+                                <input type="text" class="form-control" aria-label="Zip" placeholder="請輸入">
+                            </div>
+                            <div class="mb-3">
+                                <label for="input1" class="form-label">圖片</label>
+                                <div class="d-flex flex-wrap">
+                                    <div class="btn-img">
+                                        <input type="file" />
+                                        <a href="#" class="btn">
+                                            <!-- 圖片 --><img src="images/error.png" alt=""> 
+                                        </a>
+                                        <!-- 刪除 --><button class="btn btn-trash btn-danger"><i class="fas fa-trash fa-lg"></i></button>
+                                    </div>
+                                    <div class="btn-img">
+                                        <input type="file" />
+                                        <a href="#" class="btn">
+                                            <!-- 圖片 --><img src="images/error.png" alt=""> 
+                                        </a>
+                                        <!-- 刪除 --><button class="btn btn-trash btn-danger"><i class="fas fa-trash fa-lg"></i></button>
+                                    </div>
+                                    <div class="btn-img">
+                                        <input type="file" />
+                                        <a href="#" class="btn">
+                                            <!-- 新增 --><i class="fas fa-plus"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="fas fa-window-close me-1"></i>取消</button>
+                        <button type="button" class="btn btn-color01"><i class="fas fa-save me-1"></i>儲存</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="cell" data-title="歷程紀錄"><a href="#" class="link-secondary p-0"><i class="fas fa-history fa-lg"></i></a></div>      
+        </div>
+        <div class="row list-body">
+            <div class="cell" data-title="選取">
+                <div class="d-inline-block p-0">
+                    <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                </div>
+            </div>
+            <div class="cell" data-title="項次">1</div>
+            <div class="cell" data-title="代碼">110</div>
+            <div class="cell" data-title="類別">耗材</div>
+            <div class="cell" data-title="名稱">XXX名稱</div>
+            <div class="cell" data-title="編輯"><a href="#" class="link-color px-0"><i class="fas fa-edit fa-lg"></i></a></div>
+            <div class="cell" data-title="歷程紀錄"><a href="#" class="link-secondary px-0"><i class="fas fa-history fa-lg"></i></a></div>      
+        </div>
+    </div>   
+</div>            
+<div class="list-pagination my-3" >
+    <div>
+		每頁
+		<select class="form-select form-select-sm">
+			<option>10</option>
+			<option>30</option>
+			<option>50</option>
+		</select>
+		筆，第 <span>1/18</span> 頁，共 <span>88</span> 筆，<a href="#" class="link-color">上一頁</a>｜跳至第
+		<select class="form-select form-select-sm">
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+		</select>
+		頁｜<a href="#" class="link-color">下一頁</a>
+	</div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- js 載入 -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- 各分頁引用js -->
+    
+<!-- <script></script> -->
+
+
+    <!-- 我的 js -->
+    <script src="js/front-main.js"></script>
+</body>
+
+</html>
