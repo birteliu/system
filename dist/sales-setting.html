@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>
-    原物料設定
+    銷貨設定
 ｜益佳食品 ERP</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="/Content/EzgoFront/images/favicon.ico" />
@@ -39,7 +39,7 @@
 			</a>
 			<ul class="nav flex-column">
 			<li class="nav-item">
-				<a class="nav-link  active " aria-current="page" href="material-setting.html">
+				<a class="nav-link " aria-current="page" href="material-setting.html">
 				<i class="far fa-bookmark me-2"></i>原物料設定
 				</a>
 			</li>
@@ -54,11 +54,11 @@
 				</a>
 			</li>
 			<li class="nav-item dropdown dropend">
-			  <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  <a class="nav-link dropdown-toggle  active " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 				<i class="far fa-bookmark me-2"></i>銷貨管理
 			  </a>
 			  <ul class="dropdown-menu">
-				<li><a class="dropdown-item " href="sales-setting.html">銷貨設定</a></li>
+				<li><a class="dropdown-item  active " href="sales-setting.html">銷貨設定</a></li>
 				<li><a class="dropdown-item" href="sales-stock.html">庫存管理</a></li>
 				<li><a class="dropdown-item" href="sales.html">銷貨管理</a></li>
 			  </ul>
@@ -88,7 +88,7 @@
                         <!-- 內容切換 -->
                         
 <div class="page-title">
-    <h3>原物料設定</h3>
+    <h3>銷貨設定</h3>
     <nav aria-label="breadcrumb">
     <ol class="breadcrumb p-0 m-0">
       <li class="breadcrumb-item">
@@ -103,7 +103,7 @@
 </div>
 <form class="search-area">
     <div class="row g-3">
-        <div class="col-md-5">
+        <div class="col-md-6">
             <label for="">依欄位查詢</label>
             <div class="row g-2">
                 <div class="col">
@@ -120,7 +120,7 @@
             </div>
         </div>
         <div class="col-md-3">
-            <label for="">類別</label>
+            <label for="">是否啟用</label>
             <select class="form-select" aria-label="">
                 <option selected>請選擇</option>
                 <option value="1">One</option>
@@ -138,16 +138,18 @@
     <div class="mb-2">
         <button class="btn btn-color01 btn-sm me-1" onclick="javascript:location.href='#'"><i class="fa fa-plus-circle  me-2" aria-hidden="true"></i>新增</button>
         <button class="btn btn-danger btn-sm me-1"><i class="far fa-trash-alt me-2" aria-hidden="true"></i>刪除</button>
-        <button class="btn btn-secondary btn-sm me-1"><i class="fa fa-download me-2" aria-hidden="true"></i>匯出</button>
     </div>
     <div class="table m-0">
         <div class="row list-header">
             <div class="cell"></div>
             <div class="cell">項次</div>
-            <div class="cell">代碼</div>
-            <div class="cell">類別</div>
-            <div class="cell">名稱</div>
-            <div class="cell">編輯</div>
+            <div class="cell">商品編號</div>
+            <div class="cell">商品名稱</div>
+            <div class="cell text-end">原價</div>
+            <div class="cell">是否啟用</div>
+            <div class="cell">原物料品項名稱</div>
+            <div class="cell text-end">數量</div>
+            <div class="cell text-end">總預估成本</div>
             <div class="cell">歷程紀錄</div>
         </div>
         <div class="row list-body">
@@ -157,76 +159,19 @@
                 </div>
             </div>
             <div class="cell" data-title="項次">1</div>
-            <div class="cell" data-title="代碼">110</div>
-            <div class="cell" data-title="類別">耗材</div>
-            <div class="cell" data-title="名稱">XXX名稱</div>
-            <div class="cell" data-title="編輯">
-                <a href="#" class="link-color p-0" data-bs-toggle="modal" data-bs-target="#editModal"><i class="fas fa-edit fa-lg"></i></a>
-                <!-- Modal -->
-                <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="editModalLabel">原物料設定</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body">
-                        <form action="">
-                            <div class="mb-3">
-                                <label for="input1" class="form-label">類別</label>
-                                <select id="input" class="form-select" placeholder="請輸入">
-                                    <option selected="">請選擇</option>
-                                    <option>A</option>
-                                    <option>B</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label for="input1" class="form-label">代碼</label>
-                                <input type="text" class="form-control" aria-label="Zip" placeholder="請輸入">
-                            </div>
-                            <div class="mb-3">
-                                <label for="input1" class="form-label">名稱</label>
-                                <input type="text" class="form-control" aria-label="Zip" placeholder="請輸入">
-                            </div>
-                            <div class="mb-3">
-                                <label for="input1" class="form-label">備註</label>
-                                <input type="text" class="form-control" aria-label="Zip" placeholder="請輸入">
-                            </div>
-                            <div class="mb-3">
-                                <label for="input1" class="form-label">圖片</label>
-                                <div class="d-flex flex-wrap">
-                                    <div class="btn-img">
-                                        <input type="file" />
-                                        <a href="#" class="btn">
-                                            <!-- 圖片 --><img src="images/default.png" alt=""> 
-                                        </a>
-                                        <!-- 刪除 --><button class="btn btn-trash btn-danger"><i class="fas fa-trash fa-lg"></i></button>
-                                    </div>
-                                    <div class="btn-img">
-                                        <input type="file" />
-                                        <a href="#" class="btn">
-                                            <!-- 圖片 --><img src="images/default.png" alt=""> 
-                                        </a>
-                                        <!-- 刪除 --><button class="btn btn-trash btn-danger"><i class="fas fa-trash fa-lg"></i></button>
-                                    </div>
-                                    <div class="btn-img">
-                                        <input type="file" />
-                                        <a href="#" class="btn">
-                                            <!-- 新增 --><i class="fas fa-plus"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="fas fa-window-close me-1"></i>取消</button>
-                        <button type="button" class="btn btn-color01"><i class="fas fa-save me-1"></i>儲存</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div class="cell" data-title="商品編號">S123123</div>
+            <div class="cell" data-title="商品名稱"><a href="sale-setting-detail.html" class="link-color p-0">藍莓蛋糕 1切12</a></div>
+            <div class="cell text-end" data-title="原價">180 元</div>
+            <div class="cell" data-title="是否啟用">啟用</div>
+            <div class="cell" data-title="原物料品項名稱">
+                <div class="p-0">放山雞蛋</div>
+                <div class="p-0">虎牌中筋麵粉</div>
             </div>
+            <div class="cell text-end" data-title="數量">
+                <div class="p-0">0.5 顆</div>
+                <div class="p-0">150 克</div>
+            </div>
+            <div class="cell text-end" data-title="總預估成本">60 元</div>
             <div class="cell" data-title="歷程紀錄"><a href="#" class="link-secondary p-0"><i class="fas fa-history fa-lg"></i></a></div>      
         </div>
         <div class="row list-body">
@@ -235,12 +180,21 @@
                     <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
                 </div>
             </div>
-            <div class="cell" data-title="項次">1</div>
-            <div class="cell" data-title="代碼">110</div>
-            <div class="cell" data-title="類別">耗材</div>
-            <div class="cell" data-title="名稱">XXX名稱</div>
-            <div class="cell" data-title="編輯"><a href="#" class="link-color px-0"><i class="fas fa-edit fa-lg"></i></a></div>
-            <div class="cell" data-title="歷程紀錄"><a href="#" class="link-secondary px-0"><i class="fas fa-history fa-lg"></i></a></div>      
+            <div class="cell" data-title="項次">2</div>
+            <div class="cell" data-title="商品編號">S123123</div>
+            <div class="cell" data-title="商品名稱"><a href="#" class="link-color p-0">藍莓蛋糕 1切14</a></div>
+            <div class="cell text-end" data-title="原價">180 元</div>
+            <div class="cell" data-title="是否啟用">啟用</div>
+            <div class="cell" data-title="原物料品項名稱">
+                <div class="p-0">放山雞蛋</div>
+                <div class="p-0">虎牌中筋麵粉</div>
+            </div>
+            <div class="cell text-end" data-title="數量">
+                <div class="p-0">0.4 顆</div>
+                <div class="p-0">120 克</div>
+            </div>
+            <div class="cell text-end" data-title="總預估成本">50 元</div>
+            <div class="cell" data-title="歷程紀錄"><a href="#" class="link-secondary p-0"><i class="fas fa-history fa-lg"></i></a></div>      
         </div>
     </div>   
 </div>            

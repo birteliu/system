@@ -26,6 +26,16 @@
 				<i class="far fa-bookmark me-2"></i>存貨管理
 				</a>
 			</li>
+			<li class="nav-item dropdown dropend">
+			  <a class="nav-link dropdown-toggle {%if activePage == 'salesSetting' %} active {% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				<i class="far fa-bookmark me-2"></i>銷貨管理
+			  </a>
+			  <ul class="dropdown-menu">
+				<li><a class="dropdown-item {%if activePage == 'salesSetting' %} active {% endif %}" href="sales-setting.html">銷貨設定</a></li>
+				<li><a class="dropdown-item" href="sales-stock.html">庫存管理</a></li>
+				<li><a class="dropdown-item" href="sales.html">銷貨管理</a></li>
+			  </ul>
+			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="#">
 				<i class="fas fa-cog me-2"></i>系統設定

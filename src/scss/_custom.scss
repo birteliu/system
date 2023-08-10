@@ -74,6 +74,7 @@ main {
     align-items: center;
     padding: .75rem 1rem;
     box-shadow: $custom-box-shadow;
+    margin-bottom: 1rem;
     @include media-breakpoint-down(md) {
         display: block;
     }
@@ -112,11 +113,36 @@ input.form-control {
     }
 }
 
+// tabs 頁籤
+.tabs-item {
+    margin-left: 1rem;
+    ul.nav-pills {
+        .nav-item {
+            button.nav-link {
+                background-color: $gray-400;
+                border-radius: 6px 6px 0 0;
+                margin-right: .5rem;
+                transition: .3s;
+                color: #fff;
+                &:hover {
+                    background-color: $gray-500;
+                }
+                &.active {
+                    background-color: $main-color01;
+                    &:hover {
+                        background-color: $main-color01;
+                    }
+                }
+            }
+        }
+    }
+}
+
 // 搜尋區塊 search-area
 .search-area {
     background-color: #fff;
     padding: 1rem;
-    margin: 1rem auto;
+    margin: 0 auto 1rem auto;
     border: 1px solid $gray-300;
     border-radius: $custom-border-radius;
     box-shadow: $custom-box-shadow;

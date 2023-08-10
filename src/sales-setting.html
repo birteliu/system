@@ -1,0 +1,118 @@
+<!-- index.nunjucks -->
+{% extends "layout.html" %}
+<!--TITLE setting-->
+{% block title %}
+    銷貨設定
+{% endblock %}
+<!--Nav setting-->
+{% block navigation %}
+{% import 'macros/nav.html' as nav %}
+<!-- Set navitem to active -->
+{{nav.active('salesSetting')}}
+{% endblock %}
+
+<!-- 內容 -->
+{% block content %}
+<div class="page-title">
+    <h3>銷貨設定</h3>
+    {% include "macros/breadcrumb.html" %}
+</div>
+<form class="search-area">
+    <div class="row g-3">
+        <div class="col-md-6">
+            <label for="">依欄位查詢</label>
+            <div class="row g-2">
+                <div class="col">
+                    <select class="form-select" aria-label="">
+                        <option selected>請選擇</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="請輸入" aria-label="">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label for="">是否啟用</label>
+            <select class="form-select" aria-label="">
+                <option selected>請選擇</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+        <div class="col d-flex align-items-end">
+            <button class="btn btn-color02 search-btn me-2" type="submit"><i class="fas fa-search me-2"></i>查詢</button>
+            <button class="btn btn-secondary search-btn" type="submit">列出全部</button>
+        </div>
+    </div>
+</form>
+<div class="list-area p-3 mt-3 bg-white">
+    <div class="mb-2">
+        <button class="btn btn-color01 btn-sm me-1" onclick="javascript:location.href='#'"><i class="fa fa-plus-circle  me-2" aria-hidden="true"></i>新增</button>
+        <button class="btn btn-danger btn-sm me-1"><i class="far fa-trash-alt me-2" aria-hidden="true"></i>刪除</button>
+    </div>
+    <div class="table m-0">
+        <div class="row list-header">
+            <div class="cell"></div>
+            <div class="cell">項次</div>
+            <div class="cell">商品編號</div>
+            <div class="cell">商品名稱</div>
+            <div class="cell text-end">原價</div>
+            <div class="cell">是否啟用</div>
+            <div class="cell">原物料品項名稱</div>
+            <div class="cell text-end">數量</div>
+            <div class="cell text-end">總預估成本</div>
+            <div class="cell">歷程紀錄</div>
+        </div>
+        <div class="row list-body">
+            <div class="cell" data-title="選取">
+                <div class="d-inline-block p-0">
+                    <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                </div>
+            </div>
+            <div class="cell" data-title="項次">1</div>
+            <div class="cell" data-title="商品編號">S123123</div>
+            <div class="cell" data-title="商品名稱"><a href="sale-setting-detail.html" class="link-color p-0">藍莓蛋糕 1切12</a></div>
+            <div class="cell text-end" data-title="原價">180 元</div>
+            <div class="cell" data-title="是否啟用">啟用</div>
+            <div class="cell" data-title="原物料品項名稱">
+                <div class="p-0">放山雞蛋</div>
+                <div class="p-0">虎牌中筋麵粉</div>
+            </div>
+            <div class="cell text-end" data-title="數量">
+                <div class="p-0">0.5 顆</div>
+                <div class="p-0">150 克</div>
+            </div>
+            <div class="cell text-end" data-title="總預估成本">60 元</div>
+            <div class="cell" data-title="歷程紀錄"><a href="#" class="link-secondary p-0"><i class="fas fa-history fa-lg"></i></a></div>      
+        </div>
+        <div class="row list-body">
+            <div class="cell" data-title="選取">
+                <div class="d-inline-block p-0">
+                    <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                </div>
+            </div>
+            <div class="cell" data-title="項次">2</div>
+            <div class="cell" data-title="商品編號">S123123</div>
+            <div class="cell" data-title="商品名稱"><a href="#" class="link-color p-0">藍莓蛋糕 1切14</a></div>
+            <div class="cell text-end" data-title="原價">180 元</div>
+            <div class="cell" data-title="是否啟用">啟用</div>
+            <div class="cell" data-title="原物料品項名稱">
+                <div class="p-0">放山雞蛋</div>
+                <div class="p-0">虎牌中筋麵粉</div>
+            </div>
+            <div class="cell text-end" data-title="數量">
+                <div class="p-0">0.4 顆</div>
+                <div class="p-0">120 克</div>
+            </div>
+            <div class="cell text-end" data-title="總預估成本">50 元</div>
+            <div class="cell" data-title="歷程紀錄"><a href="#" class="link-secondary p-0"><i class="fas fa-history fa-lg"></i></a></div>      
+        </div>
+    </div>   
+</div>            
+{% include "macros/pagination.html" %}
+{% endblock %}
