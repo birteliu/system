@@ -17,3 +17,5 @@ bootstrap @5.2.0
 存貨管理－－－－－－－－－purchase-detail.html
 銷貨設定－－－－－－－－－sales-setting.html
 銷貨設定詳細頁－－－－－－sales-setting-detail.html
+銷貨管理－－－－－－－－－sales.html
+銷貨管理詳細頁－－－－－－sales-detail.html

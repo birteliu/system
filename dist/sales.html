@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>
-    銷貨設定
+    銷貨管理
 ｜益佳食品 ERP</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="/Content/EzgoFront/images/favicon.ico" />
@@ -54,13 +54,13 @@
 				</a>
 			</li>
 			<li class="nav-item dropdown dropend">
-			  <a class="nav-link dropdown-toggle  active " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 				<i class="far fa-bookmark me-2"></i>銷貨管理
 			  </a>
 			  <ul class="dropdown-menu">
-				<li><a class="dropdown-item  active " href="sales-setting.html">銷貨設定</a></li>
+				<li><a class="dropdown-item " href="sales-setting.html">銷貨設定</a></li>
 				<li><a class="dropdown-item" href="sales-stock.html">庫存管理</a></li>
-				<li><a class="dropdown-item " href="sales.html">銷貨管理</a></li>
+				<li><a class="dropdown-item  active " href="sales.html">銷貨管理</a></li>
 			  </ul>
 			</li>
 			<li class="nav-item">
@@ -88,7 +88,7 @@
                         <!-- 內容切換 -->
                         
 <div class="page-title">
-    <h3>銷貨設定</h3>
+    <h3>銷貨管理</h3>
     <nav aria-label="breadcrumb">
     <ol class="breadcrumb p-0 m-0">
       <li class="breadcrumb-item">
@@ -103,7 +103,7 @@
 </div>
 <form class="search-area">
     <div class="row g-3">
-        <div class="col-md-6">
+        <div class="col-md-4">
             <label for="">依欄位查詢</label>
             <div class="row g-2">
                 <div class="col">
@@ -119,8 +119,17 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <label for="">是否啟用</label>
+        <div class="col-md-2">
+            <label for="">付款狀態</label>
+            <select class="form-select" aria-label="">
+                <option selected>請選擇</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label for="">出貨狀態</label>
             <select class="form-select" aria-label="">
                 <option selected>請選擇</option>
                 <option value="1">One</option>
@@ -143,57 +152,48 @@
         <div class="row list-header">
             <div class="cell"></div>
             <div class="cell">項次</div>
-            <div class="cell">商品編號</div>
-            <div class="cell">商品名稱</div>
-            <div class="cell text-end">原價</div>
-            <div class="cell">是否啟用</div>
-            <div class="cell">原物料品項名稱</div>
-            <div class="cell text-end">數量</div>
-            <div class="cell text-end">總預估成本</div>
+            <div class="cell">訂單編號</div>
+            <div class="cell">訂購人</div>
+            <div class="cell">接洽人</div>
+            <div class="cell">付款狀態</div>
+            <div class="cell">出貨狀態</div>
+            <div class="cell">銷貨日期</div>
+            <div class="cell">適用優惠</div>
+            <div class="cell text-end">總金額</div>
             <div class="cell">歷程紀錄</div>
         </div>
         <div class="row list-body">
             <div class="cell" data-title="選取">
                 <div class="d-inline-block p-0">
-                    <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                    <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="">
                 </div>
             </div>
             <div class="cell" data-title="項次">1</div>
-            <div class="cell" data-title="商品編號">S123123</div>
-            <div class="cell" data-title="商品名稱"><a href="sale-setting-detail.html" class="link-color p-0">藍莓蛋糕 1切12</a></div>
-            <div class="cell text-end" data-title="原價">180 元</div>
-            <div class="cell" data-title="是否啟用">啟用</div>
-            <div class="cell" data-title="原物料品項名稱">
-                <div class="p-0">放山雞蛋</div>
-                <div class="p-0">虎牌中筋麵粉</div>
-            </div>
-            <div class="cell text-end" data-title="數量">
-                <div class="p-0">0.5 顆</div>
-                <div class="p-0">150 克</div>
-            </div>
-            <div class="cell text-end" data-title="總預估成本">60 元</div>
+            <div class="cell" data-title="訂單編號"><a href="sales-detail.html" class="link-color p-0">P123123</a></div>
+            <div class="cell" data-title="訂購人">小小公司</div>
+            <div class="cell" data-title="接洽人">員工Ｂ</div>
+            <div class="cell" data-title="付款狀態"><span class="status unprocessed">尚未付款</span></div>
+            <div class="cell" data-title="出貨狀態"><span class="status solved">完成出貨</span></div>
+            <div class="cell" data-title="銷貨日期">2023/06/25</div>
+            <div class="cell" data-title="適用優惠">滿千九折</div>
+            <div class="cell text-end" data-title="總金額">306 元</div>
             <div class="cell" data-title="歷程紀錄"><a href="#" class="link-secondary p-0"><i class="fas fa-history fa-lg"></i></a></div>      
         </div>
         <div class="row list-body">
             <div class="cell" data-title="選取">
                 <div class="d-inline-block p-0">
-                    <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                    <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="">
                 </div>
             </div>
-            <div class="cell" data-title="項次">2</div>
-            <div class="cell" data-title="商品編號">S123123</div>
-            <div class="cell" data-title="商品名稱"><a href="#" class="link-color p-0">藍莓蛋糕 1切14</a></div>
-            <div class="cell text-end" data-title="原價">180 元</div>
-            <div class="cell" data-title="是否啟用">啟用</div>
-            <div class="cell" data-title="原物料品項名稱">
-                <div class="p-0">放山雞蛋</div>
-                <div class="p-0">虎牌中筋麵粉</div>
-            </div>
-            <div class="cell text-end" data-title="數量">
-                <div class="p-0">0.4 顆</div>
-                <div class="p-0">120 克</div>
-            </div>
-            <div class="cell text-end" data-title="總預估成本">50 元</div>
+            <div class="cell" data-title="項次">1</div>
+            <div class="cell" data-title="訂單編號"><a href="sales-detail.html" class="link-color p-0">P123123</a></div>
+            <div class="cell" data-title="訂購人">小小公司</div>
+            <div class="cell" data-title="接洽人">員工Ｂ</div>
+            <div class="cell" data-title="付款狀態"><span class="status processing">部分付款</span></div>
+            <div class="cell" data-title="出貨狀態"><span class="status processing">部分出貨</span></div>
+            <div class="cell" data-title="銷貨日期">2023/06/25</div>
+            <div class="cell" data-title="適用優惠">滿千九折</div>
+            <div class="cell text-end" data-title="總金額">306 元</div>
             <div class="cell" data-title="歷程紀錄"><a href="#" class="link-secondary p-0"><i class="fas fa-history fa-lg"></i></a></div>      
         </div>
     </div>   

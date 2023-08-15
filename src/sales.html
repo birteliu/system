@@ -1,0 +1,118 @@
+<!-- index.nunjucks -->
+{% extends "layout.html" %}
+<!--TITLE setting-->
+{% block title %}
+    銷貨管理
+{% endblock %}
+<!--Nav setting-->
+{% block navigation %}
+{% import 'macros/nav.html' as nav %}
+<!-- Set navitem to active -->
+{{nav.active('sales')}}
+{% endblock %}
+
+<!-- 內容 -->
+{% block content %}
+<div class="page-title">
+    <h3>銷貨管理</h3>
+    {% include "macros/breadcrumb.html" %}
+</div>
+<form class="search-area">
+    <div class="row g-3">
+        <div class="col-md-4">
+            <label for="">依欄位查詢</label>
+            <div class="row g-2">
+                <div class="col">
+                    <select class="form-select" aria-label="">
+                        <option selected>請選擇</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="請輸入" aria-label="">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <label for="">付款狀態</label>
+            <select class="form-select" aria-label="">
+                <option selected>請選擇</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label for="">出貨狀態</label>
+            <select class="form-select" aria-label="">
+                <option selected>請選擇</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+        <div class="col d-flex align-items-end">
+            <button class="btn btn-color02 search-btn me-2" type="submit"><i class="fas fa-search me-2"></i>查詢</button>
+            <button class="btn btn-secondary search-btn" type="submit">列出全部</button>
+        </div>
+    </div>
+</form>
+<div class="list-area p-3 mt-3 bg-white">
+    <div class="mb-2">
+        <button class="btn btn-color01 btn-sm me-1" onclick="javascript:location.href='#'"><i class="fa fa-plus-circle  me-2" aria-hidden="true"></i>新增</button>
+        <button class="btn btn-danger btn-sm me-1"><i class="far fa-trash-alt me-2" aria-hidden="true"></i>刪除</button>
+    </div>
+    <div class="table m-0">
+        <div class="row list-header">
+            <div class="cell"></div>
+            <div class="cell">項次</div>
+            <div class="cell">訂單編號</div>
+            <div class="cell">訂購人</div>
+            <div class="cell">接洽人</div>
+            <div class="cell">付款狀態</div>
+            <div class="cell">出貨狀態</div>
+            <div class="cell">銷貨日期</div>
+            <div class="cell">適用優惠</div>
+            <div class="cell text-end">總金額</div>
+            <div class="cell">歷程紀錄</div>
+        </div>
+        <div class="row list-body">
+            <div class="cell" data-title="選取">
+                <div class="d-inline-block p-0">
+                    <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="">
+                </div>
+            </div>
+            <div class="cell" data-title="項次">1</div>
+            <div class="cell" data-title="訂單編號"><a href="sales-detail.html" class="link-color p-0">P123123</a></div>
+            <div class="cell" data-title="訂購人">小小公司</div>
+            <div class="cell" data-title="接洽人">員工Ｂ</div>
+            <div class="cell" data-title="付款狀態"><span class="status unprocessed">尚未付款</span></div>
+            <div class="cell" data-title="出貨狀態"><span class="status solved">完成出貨</span></div>
+            <div class="cell" data-title="銷貨日期">2023/06/25</div>
+            <div class="cell" data-title="適用優惠">滿千九折</div>
+            <div class="cell text-end" data-title="總金額">306 元</div>
+            <div class="cell" data-title="歷程紀錄"><a href="#" class="link-secondary p-0"><i class="fas fa-history fa-lg"></i></a></div>      
+        </div>
+        <div class="row list-body">
+            <div class="cell" data-title="選取">
+                <div class="d-inline-block p-0">
+                    <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="">
+                </div>
+            </div>
+            <div class="cell" data-title="項次">1</div>
+            <div class="cell" data-title="訂單編號"><a href="sales-detail.html" class="link-color p-0">P123123</a></div>
+            <div class="cell" data-title="訂購人">小小公司</div>
+            <div class="cell" data-title="接洽人">員工Ｂ</div>
+            <div class="cell" data-title="付款狀態"><span class="status processing">部分付款</span></div>
+            <div class="cell" data-title="出貨狀態"><span class="status processing">部分出貨</span></div>
+            <div class="cell" data-title="銷貨日期">2023/06/25</div>
+            <div class="cell" data-title="適用優惠">滿千九折</div>
+            <div class="cell text-end" data-title="總金額">306 元</div>
+            <div class="cell" data-title="歷程紀錄"><a href="#" class="link-secondary p-0"><i class="fas fa-history fa-lg"></i></a></div>      
+        </div>
+    </div>   
+</div>            
+{% include "macros/pagination.html" %}
+{% endblock %}

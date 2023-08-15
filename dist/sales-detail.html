@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>
-    進貨管理-新增
+    銷貨設定-新增
 ｜益佳食品 ERP</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="/Content/EzgoFront/images/favicon.ico" />
@@ -88,7 +88,7 @@
                         <!-- 內容切換 -->
                         
 <div class="page-title">
-    <h3>進貨管理-新增</h3>
+    <h3>銷貨設定-新增</h3>
     <nav aria-label="breadcrumb">
     <ol class="breadcrumb p-0 m-0">
       <li class="breadcrumb-item">
@@ -102,25 +102,30 @@
 </nav>
 </div>
 <form class="search-area">
+    <h6 class="detail-title"><span>銷貨資料</span></h6>
     <div class="row g-3">
         <div class="col-md-3">
-            <label for="">進貨單號</label>
+            <label for="">訂單編號</label>
             <input type="text" class="form-control" placeholder="請輸入" aria-label="">
         </div>
         <div class="col-md-3">
-            <label for="">發票號碼</label>
+            <label for="">訂購人</label>
             <input type="text" class="form-control" placeholder="請輸入" aria-label="">
         </div>
         <div class="col-md-3">
-            <label for="">下單日期</label>
-            <input type="date" class="form-control" aria-label="">
+            <label for="">銷貨日期</label>
+            <input type="date" class="form-control" placeholder="" aria-label="">
         </div>
         <div class="col-md-3">
-            <label for="">進貨日期</label>
-            <input type="date" class="form-control" aria-label="">
+            <label for="">聯絡方式</label>
+            <input type="text" class="form-control" placeholder="請輸入" aria-label="">
         </div>
         <div class="col-md-3">
-            <label for="">廠商名稱</label>
+            <label for="">寶寶資訊</label>
+            <input type="text" class="form-control" placeholder="請輸入" aria-label="">
+        </div>
+        <div class="col-md-3">
+            <label for="">資訊得知方式</label>
             <select class="form-select" aria-label="Default select example">
                 <option selected>請選擇</option>
                 <option value="1">One</option>
@@ -129,13 +134,12 @@
             </select>
         </div>
         <div class="col-md-3">
-            <label for="">付款方式</label>
-            <select class="form-select" aria-label="Default select example">
-                <option selected>請選擇</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-            </select>
+            <label for="">接洽人</label>
+            <input type="text" class="form-control" placeholder="請輸入" aria-label="">
+        </div>
+        <div class="col-md-3">
+            <label for="">匯款帳號</label>
+            <input type="text" class="form-control" placeholder="請輸入" aria-label="">
         </div>
         <div class="col-md-3">
             <label for="">付款狀態</label>
@@ -147,97 +151,102 @@
             </select>
         </div>
         <div class="col-md-3">
+            <label for="">出貨狀態</label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>請選擇</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+        <div class="col-md-6">
             <label for="">備註</label>
+            <input type="text" class="form-control" placeholder="請輸入" aria-label="">
+        </div>
+    </div>
+    <h6 class="detail-title mt-3"><span>訂購人地址</span></h6>
+    <div class="row g-3">
+        <div class="col-md-3">
+            <label for="">縣市</label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>請選擇</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <label for="">鄉鎮</label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>請選擇</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+        <div class="col-md-6">
+            <label for="">地址</label>
             <input type="text" class="form-control" placeholder="請輸入" aria-label="">
         </div>
     </div>
 </form>
 <div class="list-area p-3 mt-3 bg-white">
-    <div class="mb-2">
-        <button class="btn btn-color01 btn-sm me-1" onclick="javascript:location.href='#'"><i class="fa fa-plus-circle  me-2" aria-hidden="true"></i>新增</button>
+    <h6 class="detail-title"><span>送貨與商品</span></h6>
+    <div class="mt-3 mb-2">
+        <button class="btn btn-color01 btn-sm me-1" onclick="javascript:location.href='#'"><i class="fa fa-plus-circle  me-2" aria-hidden="true"></i>新增送貨地址</button>
         <button class="btn btn-danger btn-sm me-1"><i class="far fa-trash-alt me-2" aria-hidden="true"></i>刪除</button>
     </div>
-    <div class="table m-0">
-        <div class="row list-header">
-            <div class="cell"></div>
-            <div class="cell">項次</div>
-            <div class="cell">品項 ID</div>
-            <div class="cell">品項名稱</div>
-            <div class="cell">單位</div>
-            <div class="cell">數量</div>
-            <div class="cell">總金額</div>
-            <div class="cell">編輯</div>
-            <div class="cell">刪除</div>
-        </div>
-        <div class="row list-body">
-            <div class="cell" data-title="選取">
-                <div class="d-inline-block p-0">
-                    <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+    <div class="sales-product">
+        <div class="row g-1">
+            <div class="col-md-auto d-flex align-items-center">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="CheckDefault">
+                    <label class="form-check-label" for="CheckDefault"></label>
                 </div>
             </div>
-            <div class="cell" data-title="項次">1</div>
-            <div class="cell" data-title="品項 ID">A123-名稱</div>
-            <div class="cell" data-title="品項名稱">蛋糕刀</div>
-            <div class="cell" data-title="單位">個</div>
-            <div class="cell" data-title="數量">1</a></div>
-            <div class="cell" data-title="總金額">100.0</div>  
-            <div class="cell" data-title="編輯"><a href="#" class="link-color p-0"><i class="fas fa-edit fa-lg"></i></a></div>      
-            <div class="cell" data-title="刪除"></div>   
-        </div>
-        <div class="row list-body">
-            <div class="cell" data-title="選取">
-                <div class="d-inline-block p-0">
-                    <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
-                </div>
-            </div>
-            <div class="cell" data-title="項次">2</div>
-            <div class="cell" data-title="品項 ID">
+            <div class="col-md-2">
                 <select class="form-select" aria-label="Default select example">
-                    <option selected>請選擇</option>
+                    <option selected>配送方式</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
                     <option value="3">Three</option>
                 </select>
             </div>
-            <div class="cell" data-title="品項名稱">
-                <input type="text" class="form-control" placeholder="請輸入" aria-label="">
-            </div>
-            <div class="cell" data-title="單位">
+            <div class="col-md-2">
                 <select class="form-select" aria-label="Default select example">
-                    <option selected>請選擇</option>
+                    <option selected>縣市</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
                     <option value="3">Three</option>
                 </select>
             </div>
-            <div class="cell" data-title="數量">
-                <input type="number" class="form-control" placeholder="請輸入" aria-label="">
+            <div class="col-md-2">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>鄉鎮</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
             </div>
-            <div class="cell" data-title="總金額">
-                <input type="number" class="form-control" placeholder="請輸入" aria-label="">
-            </div>    
-            <div class="cell" data-title="確認"><a href="#" class="link-success p-0"><i class="fas fa-check fa-lg"></i></a></div>      
-            <div class="cell" data-title="刪除"><a href="#" class="link-danger p-0"><i class="fas fa-trash fa-lg"></i></a></div>    
+            <div class="col-md">
+                <input type="text" class="form-control" placeholder="請輸入地址" aria-label="">
+            </div>
+            <div class="col-auto">
+                <a class="btn arrow-open" data-bs-toggle="collapse" href="#collapseContent" role="button" aria-expanded="false" aria-controls="collapseContent"><i class="fas fa-angle-down fa-lg"></i></a>
+            </div>
         </div>
-    </div>   
+        <div class="collapse" id="collapseContent">
+          <div class="card card-body">sdf
+          </div>
+        </div>
+    </div>
 </div>   
 <div class="d-flex justify-content-end">
-    <div class="mt-3 col-md-5 purchase-total">
+    <div class="mt-3 col-md-2 purchase-total">
         <div class="row g-0">
-            <div class="col-md-6">
-                <div class="total-title text-end">總計數量</div>
-                <ul class="list-unstyled px-3 py-2">
-                    <li>蛋糕刀<span>1個</span></li>
-                    <li>高筋麵粉<span>200g</span></li>
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <div class="total-title text-end">總計稅額</div>
-                <div class="fw-bold text-end px-3 py-2">250</div>
-            </div>
-            <div class="col-md-3">
-                <div class="total-title text-end">總計金額</div>
-                <div class="fw-bold text-end px-3 py-2">5,250</div>
+            <div class="col-md">
+                <div class="total-title text-end rounded-top">總預估成本</div>
+                <div class="fw-bold text-end px-3 py-2">60 元</div>
             </div>
         </div>  
     </div>   

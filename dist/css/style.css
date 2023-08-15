@@ -12780,6 +12780,25 @@ input.form-control::-webkit-input-placeholder, input.form-control::-moz-placehol
   width: 100%;
 }
 
+.detail-title {
+  color: #4FABDE;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+.detail-title span {
+  background-color: #fff;
+  padding: 0 0.5rem;
+  margin-left: -0.5rem;
+}
+.detail-title:after {
+  content: "";
+  display: block;
+  width: calc(100% + 2rem);
+  height: 1px;
+  background-color: #dee2e6;
+  margin: -0.5rem -1rem 0 -1rem;
+}
+
 .list-area {
   border-radius: 10px;
   box-shadow: 0px 4px 17px 0px rgba(156, 161, 186, 0.25);
@@ -12793,6 +12812,9 @@ input.form-control::-webkit-input-placeholder, input.form-control::-moz-placehol
     border-top: 3px solid #4FABDE;
     padding-top: 0;
   }
+}
+.list-area .table > :not(caption) > * > * {
+  background-color: transparent;
 }
 .list-area .table .row {
   display: table-row;
@@ -12861,6 +12883,24 @@ input.form-control::-webkit-input-placeholder, input.form-control::-moz-placehol
 }
 .list-area .table .row .cell a {
   background-color: transparent;
+}
+.list-area .table .row .cell .status:before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  margin-right: 0.25rem;
+  display: inline-block;
+  margin-left: -0.5rem;
+}
+.list-area .table .row .cell .status.unprocessed::before {
+  background-color: #dc3545;
+}
+.list-area .table .row .cell .status.solved::before {
+  background-color: #198754;
+}
+.list-area .table .row .cell .status.processing::before {
+  background-color: #adb5bd;
 }
 @media (max-width: 575.98px) {
   .list-area .table .row .cell {
@@ -13019,5 +13059,10 @@ input.form-control::-webkit-input-placeholder, input.form-control::-moz-placehol
 }
 .purchase-total ul li:last-child {
   border-bottom: 0;
+}
+
+.sales-product {
+  background-color: #e9ecef;
+  padding: 0.5rem 1rem;
 }
 /*# sourceMappingURL=style.css.map */

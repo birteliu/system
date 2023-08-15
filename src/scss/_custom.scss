@@ -164,6 +164,26 @@ input.form-control {
     }
 }
 
+// 詳細頁區塊標題
+.detail-title {
+    color: $main-color01;
+    font-weight: bold;
+    margin-bottom: .75rem;
+    span {
+        background-color: #fff;
+        padding: 0 .5rem;
+        margin-left: -.5rem;
+    }
+    &:after {
+        content: "";
+        display: block;
+        width: calc(100% + 2rem);
+        height: 1px;
+        background-color: $gray-300;
+        margin: -.5rem -1rem 0 -1rem;
+    }
+}
+
 
 //列表共用
 .list-area {
@@ -175,6 +195,9 @@ input.form-control {
         @include media-breakpoint-down(sm) {
             border-top: 3px solid $main-color01;
             padding-top: 0;
+        }
+        > :not(caption) > * > * {
+            background-color: transparent;
         }
         .row {
             display: table-row;
@@ -233,6 +256,26 @@ input.form-control {
                 }
                 a {
                     background-color: transparent;
+                }
+                .status {
+                    &:before {
+                        content: "";
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 12px;
+                        margin-right: .25rem;
+                        display: inline-block;
+                        margin-left: -.5rem;
+                    }
+                    &.unprocessed::before {
+                        background-color: $danger;
+                    }
+                    &.solved::before {
+                        background-color: $success;
+                    }
+                    &.processing::before {
+                        background-color: $gray-500;
+                    }
                 }
                 @include media-breakpoint-down(sm) {
                     padding: 0rem 0.5rem;
@@ -404,5 +447,14 @@ input.form-control {
                 border-bottom: 0;
             }
         }
+    }
+}
+
+//銷貨管理-詳細頁
+.sales-product {
+    background-color: $gray-200;
+    padding: .5rem 1rem;
+    .arrow-open {
+        
     }
 }
