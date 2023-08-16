@@ -51,8 +51,8 @@ $main-color02-light: #FFD7A8;
     background-color: #fff;
     &:hover {
       background-color: lighten($main-color01-light, 5%);
-      border-color: darken($main-color01, 5%);
-      color: $main-color01;
+      border-color: darken($main-color01, 10%);
+      color: darken($main-color01, 10%);
     }
   }
 }

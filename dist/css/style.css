@@ -12040,8 +12040,8 @@ textarea.form-control-lg {
 }
 .btn-color01.outline-btn:hover {
   background-color: #d4f0f7;
-  border-color: #3aa1da;
-  color: #4FABDE;
+  border-color: #2796d3;
+  color: #2796d3;
 }
 
 .btn-color02 {
@@ -13064,5 +13064,46 @@ input.form-control::-webkit-input-placeholder, input.form-control::-moz-placehol
 .sales-product {
   background-color: #e9ecef;
   padding: 0.5rem 1rem;
+  position: relative;
+}
+.sales-product button {
+  border: 0 !important;
+}
+.sales-product button.btn-danger {
+  background-color: transparent !important;
+  color: #dc3545 !important;
+}
+.sales-product button.btn-danger:hover {
+  color: #bd2130;
+}
+.sales-product .list-header {
+  background-color: #ced4da !important;
+}
+.sales-product .arrow-open {
+  color: #4FABDE;
+  border: 0;
+}
+.sales-product .arrow-open:hover, .sales-product .arrow-open:active {
+  background-color: #dee2e6;
+  color: #1E322F;
+  border: 0;
+}
+@media (max-width: 767.98px) {
+  .sales-product .arrow-open {
+    position: absolute;
+    top: 0;
+    right: 0.5rem;
+  }
+}
+.sales-product .collapse .list-area .list-body:nth-child(even):hover {
+  background-color: #fff !important;
+}
+.sales-product .collapse .list-area .list-body:nth-child(odd):hover {
+  background-color: #f8f9fa !important;
+}
+@media (max-width: 767.98px) {
+  .sales-product .collapse .list-area .list-body .cell {
+    display: flex;
+  }
 }
 /*# sourceMappingURL=style.css.map */

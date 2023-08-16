@@ -454,7 +454,49 @@ input.form-control {
 .sales-product {
     background-color: $gray-200;
     padding: .5rem 1rem;
+    position: relative;
+    button {
+        border: 0!important;
+        &.btn-danger {
+            background-color: transparent!important;
+            color: $danger!important;
+            &:hover {
+                color: darken($danger, 10%);
+            }
+        }
+    }
+    .list-header {
+        background-color: $gray-400!important;
+    }
     .arrow-open {
-        
+        color: $main-color01;   
+        border: 0;
+        &:hover, &:active {
+            background-color: $gray-300;
+            color: $main-color04;
+            border: 0;
+        }
+        @include media-breakpoint-down(md) {
+            position: absolute;
+            top: 0;
+            right: .5rem;
+        }
+    }
+    .collapse {
+        .list-area {
+            .list-body {
+                &:nth-child(even):hover {
+                    background-color: #fff!important;
+                }
+                &:nth-child(odd):hover {
+                    background-color: #f8f9fa!important;
+                }
+                .cell {
+                    @include media-breakpoint-down(md) {
+                        display: flex;
+                    }
+                }
+            }
+        }
     }
 }
